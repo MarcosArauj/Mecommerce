@@ -1,0 +1,22 @@
+{
+    "name": "MarcosArauj/ecommerce",
+    "description": "Projeto Ecommerce em PHP7",
+    "type": "project",
+    "authors": [
+        {
+            "name": "MarcosArauj",
+            "email": "marcos.araujocruz@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer":"5.2.22",
+        "slim/slim":"2.0",
+        "rain/raintpl":"3.0.0"
+    },
+    "autoload" : {
+        "psr-4": {
+            "projectbr\\": "vendor\\projectbr\\php-classes\\src"
+        }
+    }
+}
