@@ -189,13 +189,12 @@ class User extends Model {
 	           $code = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, User::SECRET, $data_recovery["idrecovery"], MCRYPT_MODE_ECB));
                // $code = $data_recovery["idrecovery"];
 
-<<<<<<< HEAD
-	           // $link = "http://www.mecommerce.com.br/admin/forgot/reset?code=$code";
-                $link = "http://tescommerce.hol.es/admin/forgot/reset?code=$code";
-=======
-	            $link = "http://www.mecommerce.com.br/admin/forgot/reset?code=$code";
-              //  $link = "http://tescommerce.maraujocruz.com.br/admin/forgot/reset?code=$code";
->>>>>>> f027e3983c37cac45b5ad3e42f19eaab4a9e2ecc
+
+
+                $link = "http://tecommerce.hol.es/admin/forgot/reset?code=$code";
+
+	        //    $link = "http://www.mecommerce.com.br/admin/forgot/reset?code=$code";
+ 
 
 
 	            $mailer = new Mailer(
