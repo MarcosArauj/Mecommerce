@@ -119,11 +119,11 @@ $app->post('/admin/login', function() {
     exit;
 });
 
-// Rota paa logar
-$app->get('/admin/logout', function() {
+// Rota paa deslogar
+$app->get('/admin/logout', function() { 
 
     User::logout();
 
     header("Location: /admin/login");
     exit;
-});
+}); 

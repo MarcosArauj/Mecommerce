@@ -3,7 +3,7 @@
 namespace projectbr\Model;
 
 use \projectbr\DB\Sql;
-use \projectbr\Model;
+use \projectbr\Model\Model;
 
 
 
@@ -25,7 +25,7 @@ class Category extends Model {
         ));
 
         $this->setData($results[0]);
-
+ 
         Category::updeteFile();
 
     }
@@ -123,7 +123,7 @@ class Category extends Model {
         $sql = new Sql();
 
         $sql->query("INSERT INTO tb_categoriesproducts(idcategory,idproduct) VALUES(:idcategory,:idproduct)", array(
-              ':idcategory'=>$this->getidcategory(),
+              ':idcategory'=>$this->getidcategory(), 
               ':idproduct'=>$product->getidproduct()
         ));
 

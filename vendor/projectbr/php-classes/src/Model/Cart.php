@@ -3,7 +3,7 @@
 namespace projectbr\Model;
 
 use \projectbr\DB\Sql;
-use \projectbr\Model;
+use \projectbr\Model\Model;
 use \projectbr\Model\Products;
 
 

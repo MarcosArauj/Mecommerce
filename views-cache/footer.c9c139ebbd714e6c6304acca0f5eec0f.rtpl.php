@@ -1,4 +1,4 @@
-  <!-- Main Footer -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?>  <!-- Main Footer -->
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
@@ -30,7 +30,7 @@
 
                 <p>Will be 23 on April 24th</p>
               </div>
-            </a> 
+            </a>
           </li>
         </ul>
         <!-- /.control-sidebar-menu -->

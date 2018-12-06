@@ -1,6 +1,6 @@
 <?php 
 
-namespace projectbr;
+namespace projectbr\Model;
 
 class Model {
 

@@ -3,7 +3,7 @@
 namespace projectbr\Model;
 
 use \projectbr\DB\Sql;
-use \projectbr\Model;
+use \projectbr\Model\Model;
 
 class Products extends Model {
 
@@ -17,10 +17,10 @@ class Products extends Model {
         foreach ($list as &$row){
             $p = new Products();
             $p->setData($row);
-            $row = $p->getValues();
+            $row = $p->getValues(); 
         }
 
-        return $list;
+        return $list; 
     }
 
     /// Salvar e Atualizar

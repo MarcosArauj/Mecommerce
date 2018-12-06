@@ -15,10 +15,10 @@ $app->get('/admin/products', function (){
 
     $page->setTpl("products", array(
         "products"=>$products
-    ));
+    )); 
 });
 
-$app->get('/admin/products/create', function (){
+$app->get('/admin/products/create', function (){ 
 
     User::verifyLogin();
 

@@ -4,7 +4,7 @@ namespace projectbr\Model;
 
 use \projectbr\DB\Sql;
 use projectbr\Mailer;
-use \projectbr\Model;
+use \projectbr\Model\Model;
 
 class User extends Model {
 
@@ -16,12 +16,12 @@ class User extends Model {
 	    $user = new User();
 
 	    if (isset($_SESSION[User::SESSION]) && (int)$_SESSION[User::SESSION]['iduser'] >0) {
-	        $user->setData($_SESSION[User::SESSION]['iduser']);
+	        $user->setData($_SESSION[User::SESSION]);
         }
-
+ 
         return $user;
 
-    }
+    }  
 
 //	protected $fields = [
 //		"iduser", "idperson", "desperson" ,"nrphone","desemail","deslogin", "despassword", "inadmin", "dtergister","deip"
@@ -186,14 +186,14 @@ class User extends Model {
 	            $data_recovery = $results_recovery[0];
 
 
-	           $code = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, User::SECRET, $data_recovery["idrecovery"], MCRYPT_MODE_ECB));
-               // $code = $data_recovery["idrecovery"];
+	          $code = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, User::SECRET, $data_recovery["idrecovery"], MCRYPT_MODE_ECB));
+             //   $code = $data_recovery["idrecovery"];
 
 
 
                 $link = "http://tecommerce.hol.es/admin/forgot/reset?code=$code";
 
-	        //    $link = "http://www.mecommerce.com.br/admin/forgot/reset?code=$code";
+	        //   $link = "http://www.mecommerce.com.br/admin/forgot/reset?code=$code";
  
 
 

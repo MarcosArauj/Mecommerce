@@ -95,7 +95,7 @@ $app->get('/admin/categories/:idcategory/products', function ($idcategory){
 
     $category = new Category();
 
-    $category->get((int)$idcategory);
+    $category->get((int)$idcategory); 
 
     $page = new PageAdmin();
 
