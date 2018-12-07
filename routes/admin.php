@@ -8,9 +8,10 @@ $app->get('/admin', function() {
 
     User::verifyLogin();
 
-    $user = User::getFromSession();
 
     $page = new PageAdmin();
+
+    $user = User::getFromSession();
 
     $page->setTpl("index", array(
             "user"=>$user->getValues()
